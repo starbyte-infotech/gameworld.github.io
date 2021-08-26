@@ -1,0 +1,199 @@
+/*.queDiv-1, .queDiv-2, .queDiv-5, .queDiv-6, .queDiv-3, .queDiv-4{ display: none; }
+.loadMore{ font-weight: 600; } */ 
+.search-outer-block{
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px #0000001a;
+    margin-top: 5px;
+    max-height: 550px;
+    overflow: auto;
+    padding: 5px 0;
+    position: absolute;
+    right: 34px;
+    top: 133px;
+    width: 320px;
+    z-index: 99999;
+    opacity: 0;
+}
+.search-outer-block .fav_icon_img{
+    height: 10.97px;
+    width: 12.33px;
+}   
+.search-img {
+    border-radius: 3px;
+    height: 48px;
+    width: 48px;
+    float: left;
+}
+img.s_img {
+    border-radius: 3px;
+    height: 48px;
+    width: 48px;
+}
+.search-outer-block .search_game{
+    float: left;
+} 
+.search-outer-block .search_game p{
+    color: #2c2c2c;
+    font-size: 15px;
+    font-weight: 700;
+}
+.search-item.row:hover {
+    background-color: #e8e7e7;
+}
+.search-outer-block .search_game small {
+    color: #2c2c2c;
+    font-size: 12px;
+    font-weight: 400;
+}
+.fav-icon{
+    cursor: pointer;
+}
+.fav_active{
+    background: #fff !important;
+}
+.fav_active i.fas.fa-heart {
+    color: #f74949 !important;
+}
+.nofav_msg_block{
+	margin: 40px 10px 40px 10px;
+}
+/*.fav-icon:hover{ 
+    background-color: #f74949;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}*/
+.category-text.fav_msg{
+	font-size: 16px;
+	text-align: center;
+}
+.games-sec{
+    padding:0 0px 30px 0;
+}
+.pageitem .nav-item .active{        
+    font-weight: 500 !important;
+    background-color: #557a95 !important;
+    border-color: #557a95;
+    border-radius: 10px;
+}
+.pageitem .nav-item .active a{ 
+    color: #fff !important;
+}
+.pageitem .nav-item{
+    border-color: #557a95 !important;
+    isolation: isolate;
+    border-radius: 10px;
+}
+.block_text a{
+    color:#fff;
+    font-weight:600;
+    letter-spacing:1px;
+}
+.overflowx-hidden{
+    overflow-x: hidden;
+    
+
+}
+.catid-1, .catid-2, .catid-5, .catid-6, .catid-3, .catid-4{ display: none; }
+        .loadMore{ font-weight: 600; }
+        .search-inner .fav-icon {
+            margin-top: -45px;
+        }
+        .game-img .small{
+            width: 40px;
+            height: 40px;
+        }
+        .text-center {
+            text-align: center;
+        }
+
+        .font-size-24 {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .header {
+            width: 100%;
+            padding: 45px 15px;
+            background: #ee6664;
+            text-align: center;
+        }
+
+        .banner1 {
+            width: 100%;
+            padding: 45px 15px;
+            text-align: center;
+            background: #f86ca4;
+        }
+
+        .mainContent {
+            width: 100%;
+            position: relative;
+        }
+
+        .sidebar {
+
+            height: auto;
+            padding: 45px 0;
+        }
+
+        .sidebar.fixed {
+            position: sticky;
+            top: 0;
+        }
+
+        .content {
+
+            height: auto;
+            padding: 45px 0;
+        }
+
+        .footer {
+            clear: both;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        .search-icon {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-icon input[type=text] {
+            position: relative;
+            padding: 10px 40px 10px 20px;
+            width: 20px;
+            color: #525252;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 100;
+            letter-spacing: 2px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(to right, #FFFFFF 0%, #464747 #F9F9F9 100%);
+            transition: width 0.4s ease;
+            outline: none;
+        }
+
+        .search-icon input[type=text]:focus {
+            width: 250px;
+        }
+
+        .search-icon i {
+            position: relative;
+            left: -37px;
+            color: #557a95;
+        }
+        .search-icon span i {
+            left: 0;
+            color: #557a95;
+        }
