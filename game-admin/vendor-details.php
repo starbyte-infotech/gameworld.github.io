@@ -6,11 +6,11 @@ include('config.php');
 if(isset($_GET['subadmin'])){
 
     $subadmin_id = $_GET['subadmin'];
-    $get_subadmin = "SELECT * FROM `tbl_generate_link` WHERE `sub_admin` = '$subadmin_id'";
-    $res_subadmin = mysqli_query($conn, $get_subadmin);
-    $num_rows = mysqli_num_rows($res_subadmin);
-    // $fetch_subadmin = mysqli_fetch_array($res_subadmin);
-    // echo '';print_r($fetch_subadmin); 
+    $get_links = "SELECT * FROM `tbl_generate_link` WHERE `sub_admin` = '$subadmin_id'";
+    $res_links = mysqli_query($conn, $get_links);
+    $num_rows = mysqli_num_rows($res_links); 
+    // $fetch_link = mysqli_fetch_array($res_links);
+    // echo '';print_r($fetch_link); 
 }
 ?>
     <div class="content">
@@ -22,24 +22,28 @@ if(isset($_GET['subadmin'])){
                     </div>
                     <div class="card-body"> 
                     <?php 
-                    while($fetch_subadmin = mysqli_fetch_array($res_subadmin)){ 
-                        $created_at = $fetch_subadmin['created_at'];
-                        $date_format = date("F j, Y", strtotime($created_at))
-                    ?>
-                        <div class="row my-3">
-                            <div class="col-9 pr-1">
-                                <div class="form-group">
-                                    <label>Link <?php echo $fetch_subadmin['id']?></label> <span class="ml-3">Link Generated on <?php echo $date_format ?></span>
-                                    <input type="text" class="form-control disabled link-input"
-                                        placeholder="Company" value="<?php echo $fetch_subadmin['link'] ?>">
+                    if($num_rows == 0){ ?>
+                        <center><h3>No Linkes Generated Yet.</h3></center>
+                    <?php }else{
+                        while($fetch_link = mysqli_fetch_array($res_links)){ 
+                            $created_at = $fetch_link['created_at'];
+                            $date_format = date("F j, Y", strtotime($created_at))
+                        ?>
+                            <div class="row my-3">
+                                <div class="col-9 pr-1">
+                                    <div class="form-group">
+                                        <label>Link <?php echo $fetch_link['id']?></label> <span class="ml-3">Link Generated on <?php echo $date_format ?></span>
+                                        <input type="text" class="form-control disabled link-input"
+                                            placeholder="Company" value="<?php echo $fetch_link['link'] ?>">
+                                    </div>
+                                </div>
+                                <div class="col-auto my-3 d-flex" style=" align-self: center;">
+                                    <a class="details update-request" href="#" onclick="linkActive(<?php echo $fetch_link['id'] ?>,<?php echo $subadmin_id ?>);">Active </a> 
+                                    || <a class="details bg-red" href="#" onclick="linkDeactive(<?php echo $fetch_link['id'] ?>,<?php echo $subadmin_id ?>);"> Deactivate</a>
                                 </div>
                             </div>
-                            <div class="col-auto my-3 d-flex" style=" align-self: center;">
-                                <a class="details update-request" href="#" onclick="linkActive(<?php echo $fetch_subadmin['id'] ?>,<?php echo $subadmin_id ?>);">Active </a> 
-                                || <a class="details bg-red" href="#" onclick="linkDeactive(<?php echo $fetch_subadmin['id'] ?>,<?php echo $subadmin_id ?>);"> Deactivate</a>
-                            </div>
-                        </div>
-                    <?php } ?>
+                        <?php } 
+                    } ?>
                     
                 </div>
             </div>
